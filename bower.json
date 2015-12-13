@@ -1,0 +1,8 @@
+{
+  "name": "rapdoc",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.0",
+    "ionic-material-design-lite": "1.0.0-rc-1"
+  }
+}

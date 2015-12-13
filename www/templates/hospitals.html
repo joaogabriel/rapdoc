@@ -1,0 +1,24 @@
+<ion-view view-title="Hospitais">
+  <ion-nav-title>
+    <sos-header></sos-header>
+  </ion-nav-title>
+
+  <div class="bar bar-subheader">
+    <h2 class="title">Resultado</h2>
+  </div>
+
+  <ion-content overflow-scroll="true" class="has-header has-subheader padding">
+
+    <div class="" ng-repeat="hospital in hospitals">
+
+      <div class="item item-button-right">
+        {{hospital}}
+        <button class="button button-assertive ">
+          <i class="icon ion-ios-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>
