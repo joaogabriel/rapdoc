@@ -11,13 +11,11 @@
 
     <div class="" ng-repeat="hospital in hospitals">
 
-      <div class="item item-button-right">
+      <div class="item item-icon-left item-icon-right" ng-click="viewHospitalData(hospital.id)">
+        <i class="icon ion-medkit"></i>
         {{hospital.get('nome')}}
-        <button class="button button-assertive" ng-click="viewHospitalData(hospital.id)">
-          <i class="icon ion-ios-arrow-right"></i>
-        </button>
+        <i class="icon ion-ios-arrow-right"></i>
       </div>
-
     </div>
 
   </ion-content>

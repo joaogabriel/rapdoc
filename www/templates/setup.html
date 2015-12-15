@@ -3,15 +3,14 @@
     <h2 class="title">Selecione seu plano de saúde</h2>
   </div>
   <ion-content overflow-scroll="true" class="has-header has-subheader padding">
-    <h1>Setup</h1>
+    <!--h1>Setup</h1-->
 
     <label class="item item-input item-select">
       <div class="input-label">
-        Plano de Saúde
+        Plano
       </div>
       <select ng-model="planoSaude" ng-change="pesquisarSubtipos()"
               ng-options="planoSaude as planoSaude.get('nome') for planoSaude in planosSaude track by planoSaude.id">
-
       </select>
     </label>
 
@@ -21,7 +20,6 @@
       </div>
       <select ng-model="subtipo"
               ng-options="subtipo as subtipo.get('nome') for plano in subtipos track by subtipo.id">
-        <option value="">Unknown</option>
       </select>
     </label>
 

@@ -25,10 +25,10 @@
 }
 
 .tbl-home {
-  width: 80%;
+  width: 100%;
 }
 
 .tbl-home td {
   text-align: center;
-  padding: 30px;
+  padding: 15px;
 }
