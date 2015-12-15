@@ -9,10 +9,9 @@
       <div class="input-label">
         Plano de Saúde
       </div>
-      <select>
-        <option>Blue</option>
-        <option selected>Green</option>
-        <option>Red</option>
+      <select ng-model="planoSaude" ng-change="pesquisarSubtipos()"
+              ng-options="planoSaude as planoSaude.get('nome') for planoSaude in planosSaude track by planoSaude.id">
+
       </select>
     </label>
 
@@ -20,10 +19,9 @@
       <div class="input-label">
         Subtipo
       </div>
-      <select>
-        <option>Blue</option>
-        <option selected>Green</option>
-        <option>Red</option>
+      <select ng-model="subtipo"
+              ng-options="subtipo as subtipo.get('nome') for plano in subtipos track by subtipo.id">
+        <option value="">Unknown</option>
       </select>
     </label>
 

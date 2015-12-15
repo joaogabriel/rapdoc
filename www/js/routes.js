@@ -38,6 +38,16 @@ configs.config(function ($stateProvider, $urlRouterProvider) {
       }
     })
 
+    .state('app.hospital', {
+      url: '/hospitals/:hospitalId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/hospital.html',
+          controller: 'HospitalCtrl'
+        }
+      }
+    })
+
     .state('app.search', {
       url: '/search',
       views: {

@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "hospitalId": "6JRhha5WX9",
+      "clinicaPercentual": 50,
+      "clinicaTempoEspera": "1h",
+      "ortopediaPercentual": 30,
+      "ortopediaTempoEspera": "50 min",
+      "pediatriaPercentual": 70,
+      "pediatriaTempoEspera": "1h30min"
+    }
+  ]
+}

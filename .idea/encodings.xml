@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/www/img/heart-beat.png" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/www/js/routes.js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/www/resources/situacaoHospitais.json" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -3,6 +3,8 @@
   "private": "true",
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.1.0",
-    "ionic-material-design-lite": "1.0.0-rc-1"
+    "ionic-material-design-lite": "1.0.0-rc-1",
+    "parse": "v1.6.9",
+    "angular-resource": "v1.4.3"
   }
 }
