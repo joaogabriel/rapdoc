@@ -1,7 +1,4 @@
-//angular.module('rapdoc.controllers', [])
-controllers
-
-.controller('PlaylistsCtrl', function($scope) {
+controllers.controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -14,4 +11,5 @@ controllers
   $scope.teste = function () {
     alert('clicou');
   };
+  
 });

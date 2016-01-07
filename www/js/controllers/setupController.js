@@ -24,7 +24,6 @@ controllers.controller('SetupBCtrl', function($scope, $location) {
   $scope.init();
 
   $scope.continue = function () {
-    //alert($scope.planoSaude);
     $location.path("/app/hospitals");
   };
 
@@ -43,6 +42,6 @@ controllers.controller('SetupBCtrl', function($scope, $location) {
 
       }
     });
-  }
+  };
 
 });
