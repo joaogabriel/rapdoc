@@ -1,4 +1,5 @@
 controllers.controller('SetupBCtrl', function($scope, $location) {
+  'use strict';
 
   $scope.planoSaude = null;
   $scope.planosSaude = [];

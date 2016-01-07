@@ -1,4 +1,5 @@
 controllers.controller('HomeCtrl', function($scope, $location) {
+  'use strict';
 
   $scope.init = function () {
 

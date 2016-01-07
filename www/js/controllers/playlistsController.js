@@ -1,4 +1,6 @@
 controllers.controller('PlaylistsCtrl', function($scope) {
+  'use strict';
+  
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -11,5 +13,5 @@ controllers.controller('PlaylistsCtrl', function($scope) {
   $scope.teste = function () {
     alert('clicou');
   };
-  
+
 });

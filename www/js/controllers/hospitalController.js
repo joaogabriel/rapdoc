@@ -1,4 +1,5 @@
 controllers.controller('HospitalCtrl', function($scope, $stateParams, $resource) {
+  'use strict';
 
   $scope.hospital = null;
   $scope.situacaoHospital = null;

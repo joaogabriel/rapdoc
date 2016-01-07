@@ -1,4 +1,5 @@
 controllers.controller('HospitalsCtrl', function($scope, $location) {
+  'use strict';
 
   $scope.hospitals = [];
 
