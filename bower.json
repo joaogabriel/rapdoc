@@ -6,6 +6,8 @@
     "ionic-material-design-lite": "1.0.0-rc-1",
     "parse": "v1.6.9",
     "angular-resource": "v1.4.3",
-    "bootstrap": "v3.3.6"
+    "bootstrap": "v3.3.6",
+    "ionic-toast" : "v0.1.1",
+    "ionic-filter-bar": "v1.1.1"
   }
 }

@@ -1,4 +1,4 @@
-controllers.controller('SetupBCtrl', function($scope, $location) {
+controllers.controller('SetupBCtrl', function($scope, $location, messageNotification) {
   'use strict';
 
   $scope.planoSaude = null;

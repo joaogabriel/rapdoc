@@ -1,4 +1,4 @@
-configs.config(function ($stateProvider, $urlRouterProvider) {
+configs.config(function ($stateProvider, $urlRouterProvider, $ionicFilterBarConfigProvider) {
   $stateProvider
 
     .state('app', {
@@ -48,20 +48,20 @@ configs.config(function ($stateProvider, $urlRouterProvider) {
       }
     })
 
-    .state('app.search', {
-      url: '/search',
+    .state('app.tell-a-friend', {
+      url: '/tell-a-friend',
       views: {
         'menuContent': {
-          templateUrl: 'templates/search.html'
+          templateUrl: 'templates/tell-a-friend.html'
         }
       }
     })
 
-    .state('app.browse', {
-      url: '/browse',
+    .state('app.prefs', {
+      url: '/prefs',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/prefs.html'
         }
       }
     })
@@ -86,5 +86,7 @@ configs.config(function ($stateProvider, $urlRouterProvider) {
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
+
+  $ionicFilterBarConfigProvider.placeholder('Pesquise');
 
 });

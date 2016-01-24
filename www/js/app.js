@@ -4,7 +4,8 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('rapdoc', ['ionic', , 'ngResource', 'rapdoc.controllers', 'rapdoc.services', 'rapdoc.configs'])
+var app = angular.module('rapdoc', ['ionic', 'ngResource', 'rapdoc.controllers', 'rapdoc.services', 'rapdoc.configs',
+                         'ionic-toast', 'jett.ionic.filter.bar'])
 
   .run(function ($ionicPlatform) {
 
@@ -25,6 +26,6 @@ var app = angular.module('rapdoc', ['ionic', , 'ngResource', 'rapdoc.controllers
     });
   });
 
+var configs = angular.module('rapdoc.configs', ['jett.ionic.filter.bar']);
 var controllers = angular.module('rapdoc.controllers', []);
 var services = angular.module('rapdoc.services', []);
-var configs = angular.module('rapdoc.configs', []);

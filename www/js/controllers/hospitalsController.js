@@ -1,12 +1,22 @@
-controllers.controller('HospitalsCtrl', function($scope, $location, $compile) {
+controllers.controller('HospitalsCtrl', function($scope, $location, $compile, $ionicFilterBar) {
   'use strict';
 
   $scope.hospitals = [];
+  $scope.showList = true;
+  $scope.showMap = false;
+  $scope.mapInitialized = false;
+
+  var filterBarInstance = null;
+
+  /*$scope.locations = {
+    "id: 6JRhha5WX9, lat: 0, lng: 1",
+    "id: "6JRhha5WX9", lat: 0, lng: 1"
+  };*/
 
   $scope.init = function() {
-    //findAll();
+    findAll();
 
-    initialize();
+    //initialize();
   };
 
   $scope.init();
@@ -62,17 +72,16 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile) {
   }
 
   function initialize() {
-    var myLatlng = new google.maps.LatLng(43.07493, -89.381388);
+    //var myLatlng = new google.maps.LatLng(43.07493, -89.381388);
+    var myLatlng = new google.maps.LatLng(-15.8240771, -48.0688698);
 
     var mapOptions = {
       center: myLatlng,
       zoom: 16,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var map = new google.maps.Map(document.getElementById("map"),
-      mapOptions);
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-      alert(map);
     //Marker + infowindow + angularjs compiled ng-click
     var contentString = "<div><a ng-click='clickTest()'>Click me!</a></div>";
     var compiled = $compile(contentString)($scope);
@@ -92,6 +101,8 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile) {
     });
 
     $scope.map = map;
+
+    $scope.mapInitialized = true;
   }
   google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -115,6 +126,36 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile) {
 
   $scope.clickTest = function() {
     alert('Example of infowindow with ng-click');
+  };
+
+  $scope.showFilterBar = function () {
+    filterBarInstance = $ionicFilterBar.show({
+      items: $scope.hospitals,
+      cancelText: "Cancelar",
+      update: function (filteredItems, filterText) {
+        $scope.hospitals = filteredItems;
+        console.log(filteredItems);
+        if (filterText) {
+          console.log(filterText);
+        }
+      }
+    });
+  };
+
+  $scope.renderMap = function () {
+    $scope.showMap = true;
+    $scope.showList = false;
+
+    if (!$scope.mapInitialized) {
+      initialize();
+    }
+
+    //google.maps.event.trigger($scope.map, 'resize');
+  };
+
+  $scope.renderList = function () {
+    $scope.showMap = false;
+    $scope.showList = true;
   };
 
 });
