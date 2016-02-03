@@ -41,7 +41,7 @@
 
     <div class="list card">
       <div class="item item-avatar">
-        <img src="../img/medical-clinic-icon.jpg">
+        <img src="../img/health-icons/estetoscopio.png" width="10" height="10">
         <h2>Clínica Médica</h2>
         <p>Aprox. {{situacaoHospital.clinicaTempoEspera}}</p>
       </div>
@@ -77,7 +77,7 @@
 
     <div class="list card">
       <div class="item item-avatar">
-        <img src="../img/orthopedic-icon.png">
+        <img src="../img/health-icons/ortopedia.png">
         <h2>Ortopedia</h2>
         <p>Aprox. {{situacaoHospital.ortopediaTempoEspera}}</p>
       </div>
@@ -113,14 +113,14 @@
 
     <div class="list card">
       <div class="item item-avatar">
-        <img src="../img/pediactric-icon.png">
+        <img src="../img/health-icons/baby.png">
         <h2>Pediatria</h2>
         <p>Aprox. {{situacaoHospital.pediatriaTempoEspera}}</p>
       </div>
 
       <div class="item item-body">
         <div class="progress">
-          <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{situacaoHospital.pediatriaPercentual}}"
+          <div class="progress-bar progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{situacaoHospital.pediatriaPercentual}}"
                aria-valuemin="0" aria-valuemax="100" style="width: {{situacaoHospital.pediatriaPercentual}}%">
           </div>
         </div>
@@ -147,9 +147,91 @@
       </div>
     </div>
 
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="../img/health-icons/eletro.png">
+        <h2>Cardiologia</h2>
+        <p>Aprox. {{situacaoHospital.cardiologiaTempoEspera}}</p>
+      </div>
+
+      <div class="item item-body">
+        <div class="progress">
+          <div class="progress-bar progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{situacaoHospital.pediatriaPercentual}}"
+               aria-valuemin="0" aria-valuemax="100" style="width: {{situacaoHospital.cardiologiaPercentual}}%">
+          </div>
+        </div>
+
+        <p>
+          <a href="#" class="subdued">70 Curtidas</a>
+          <a href="#" class="subdued">1.2015 Comentários</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Curtir
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comentar
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Compartilhar
+        </a>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="../img/health-icons/enfermeira.png">
+        <h2>Ginecologia</h2>
+        <p>Aprox. {{situacaoHospital.ginecologiaTempoEspera}}</p>
+      </div>
+
+      <div class="item item-body">
+        <div class="progress">
+          <div class="progress-bar progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{situacaoHospital.pediatriaPercentual}}"
+               aria-valuemin="0" aria-valuemax="100" style="width: {{situacaoHospital.ginecologiaPercentual}}%">
+          </div>
+        </div>
+
+        <p>
+          <a href="#" class="subdued">10 Curtidas</a>
+          <a href="#" class="subdued">19 Comentários</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Curtir
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comentar
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Compartilhar
+        </a>
+      </div>
+    </div>
+
     <div align="center">
-      <button type="button" class="btn btn-danger btn-circle btn-lg" ng-click="navegar()"><i class="glyphicon glyphicon-road"></i></button>
+
+      <!--a ng-href="comgooglemaps://?center={{hospital.get('local').latitude}},{{hospital.get('local').longitude}}&zoom=14&views=traffic"-->
+      <!--a ng-href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic"
+        target="_blank" class="btn btn-danger btn-circle btn-lg"> <!-- ng-click="navegar()" -->
+        <!--i class="glyphicon glyphicon-road"></i>
+      </a-->
+
+      <a class="btn btn-danger btn-circle btn-lg" ng-href="comgooglemaps://?center={{hospital.get('local').latitude}},{{hospital.get('local').longitude}}&zoom=14&views=traffic"
+        target="_blank"><i class="glyphicon glyphicon-road"></i></a>
+      <!--
       <a href="comgooglemaps://?center={{hospital.get('local').latitude}},{{hospital.get('local').longitude}}&zoom=14&views=traffic" target="_blank">Click here for map</a>
+    -->
       <br/>
       <span>Navegar até</span>
       <br/>

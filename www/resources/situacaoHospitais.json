@@ -8,7 +8,11 @@
       "ortopediaPercentual": 30,
       "ortopediaTempoEspera": "50 min",
       "pediatriaPercentual": 70,
-      "pediatriaTempoEspera": "1h30min"
+      "pediatriaTempoEspera": "1h30min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
     },
     {
       "id": 2,
@@ -18,17 +22,25 @@
       "ortopediaPercentual": 20,
       "ortopediaTempoEspera": "30 min",
       "pediatriaPercentual": 10,
-      "pediatriaTempoEspera": "17 min"
+      "pediatriaTempoEspera": "17 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
     },
     {
       "id": 3,
       "hospitalId": "6tPQGoFvbL",
       "clinicaPercentual": 90,
-      "clinicaTempoEspera": "3h20h",
+      "clinicaTempoEspera": "3h20min",
       "ortopediaPercentual": 40,
       "ortopediaTempoEspera": "1h",
       "pediatriaPercentual": 20,
-      "pediatriaTempoEspera": "30 min"
+      "pediatriaTempoEspera": "30 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
     },
     {
       "id": 4,
@@ -38,7 +50,11 @@
       "ortopediaPercentual": 30,
       "ortopediaTempoEspera": "50 min",
       "pediatriaPercentual": 8,
-      "pediatriaTempoEspera": "18 min"
+      "pediatriaTempoEspera": "18 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "20 min"
     },
     {
       "id": 5,
@@ -48,7 +64,11 @@
       "ortopediaPercentual": 85,
       "ortopediaTempoEspera": "1h50min",
       "pediatriaPercentual": 70,
-      "pediatriaTempoEspera": "1h30min"
+      "pediatriaTempoEspera": "1h30min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "31 min"
     },
     {
       "id": 6,
@@ -58,7 +78,109 @@
       "ortopediaPercentual": 70,
       "ortopediaTempoEspera": "1h40 min",
       "pediatriaPercentual": 10,
-      "pediatriaTempoEspera": "15 min"
+      "pediatriaTempoEspera": "15 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
+    },
+    {
+      "id": 7,
+      "hospitalId": "qI0imLZcHb",
+      "clinicaPercentual": 15,
+      "clinicaTempoEspera": "1h",
+      "ortopediaPercentual": 70,
+      "ortopediaTempoEspera": "1h40 min",
+      "pediatriaPercentual": 10,
+      "pediatriaTempoEspera": "15 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 15,
+      "ginecologiaTempoEspera": "35 min"
+    },
+    {
+      "id": 8,
+      "hospitalId": "qI0imLZcHb",
+      "clinicaPercentual": 10,
+      "clinicaTempoEspera": "1h",
+      "ortopediaPercentual": 70,
+      "ortopediaTempoEspera": "1h40 min",
+      "pediatriaPercentual": 10,
+      "pediatriaTempoEspera": "15 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "28 min"
+    },
+    {
+      "id": 9,
+      "hospitalId": "Im4b2TMWBJ",
+      "clinicaPercentual": 50,
+      "clinicaTempoEspera": "1h",
+      "ortopediaPercentual": 70,
+      "ortopediaTempoEspera": "1h40 min",
+      "pediatriaPercentual": 10,
+      "pediatriaTempoEspera": "15 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
+    },
+    {
+      "id": 10,
+      "hospitalId": "vu6y1cX2Lh",
+      "clinicaPercentual": 90,
+      "clinicaTempoEspera": "1h",
+      "ortopediaPercentual": 70,
+      "ortopediaTempoEspera": "1h40 min",
+      "pediatriaPercentual": 10,
+      "pediatriaTempoEspera": "15 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
+    },
+    {
+      "id": 11,
+      "hospitalId": "yhiATXovK6",
+      "clinicaPercentual": 20,
+      "clinicaTempoEspera": "1h",
+      "ortopediaPercentual": 70,
+      "ortopediaTempoEspera": "1h40 min",
+      "pediatriaPercentual": 10,
+      "pediatriaTempoEspera": "15 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
+    },
+    {
+      "id": 12,
+      "hospitalId": "pbiqRJcSql",
+      "clinicaPercentual": 40,
+      "clinicaTempoEspera": "1h",
+      "ortopediaPercentual": 70,
+      "ortopediaTempoEspera": "1h40 min",
+      "pediatriaPercentual": 10,
+      "pediatriaTempoEspera": "15 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
+    },
+    {
+      "id": 13,
+      "hospitalId": "PIHJmy4eQw",
+      "clinicaPercentual": 80,
+      "clinicaTempoEspera": "15 min",
+      "ortopediaPercentual": 70,
+      "ortopediaTempoEspera": "1h40 min",
+      "pediatriaPercentual": 10,
+      "pediatriaTempoEspera": "15 min",
+      "cardiologiaPercentual": 80,
+      "cardiologiaTempoEspera": "1h50min",
+      "ginecologiaPercentual": 20,
+      "ginecologiaTempoEspera": "35 min"
     }
   ]
 }

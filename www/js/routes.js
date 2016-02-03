@@ -90,3 +90,11 @@ configs.config(function ($stateProvider, $urlRouterProvider, $ionicFilterBarConf
   $ionicFilterBarConfigProvider.placeholder('Pesquise');
 
 });
+configs.config( [
+    '$compileProvider',
+    function( $compileProvider )
+    {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|comgooglemaps):/);
+        // Angular before v1.2 uses $compileProvider.urlSanitizationWhitelist(...)
+    }
+]);

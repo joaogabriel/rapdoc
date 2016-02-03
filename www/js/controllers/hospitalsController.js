@@ -83,7 +83,7 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile, $i
 
     $scope.hospitals.forEach(function (hospital) {
       //Marker + infowindow + angularjs compiled ng-click
-      var contentString = "<div><a ng-click='clickTest()'>Ver tempo de espera no " + hospital.get('nome') + "</a></div>";
+      var contentString = "<div><a ng-click='clickTest()'>" + hospital.get('nome') + "</a></div>";
       var compiled = $compile(contentString)($scope);
 
       var infowindow = new google.maps.InfoWindow({
@@ -127,7 +127,7 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile, $i
   };
 
   $scope.clickTest = function() {
-    alert('Example of infowindow with ng-click');
+    alert('Info do Hospital');
   };
 
   $scope.showFilterBar = function () {

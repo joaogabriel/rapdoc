@@ -47,4 +47,10 @@ controllers.controller('HospitalCtrl', function($scope, $stateParams, $resource)
     alert('Esta funcionalidade estará disponível em breve.');
   };
 
+  $scope.goNavigation = function (hospital) {
+    var url = "comgooglemaps://?center=" + hospital.get('local').latitude + "," + hospital.get('local').longitude + "&zoom=14&views=traffic";
+    alert(url);
+    return url;
+  };
+
 });
