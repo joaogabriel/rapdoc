@@ -8,11 +8,6 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile, $i
 
   var filterBarInstance = null;
 
-  /*$scope.locations = {
-    "id: 6JRhha5WX9, lat: 0, lng: 1",
-    "id: "6JRhha5WX9", lat: 0, lng: 1"
-  };*/
-
   $scope.init = function() {
     findAll();
 
@@ -29,12 +24,17 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile, $i
     var Hospitais = Parse.Object.extend("Hospitais");
     var query = new Parse.Query(Hospitais);
     query.ascending("nome");
+    query.limit(50);
 
     return Parse.Promise.when(query.find({
       success: function(results) {
 
         $scope.$apply(function() {
           $scope.hospitals = results;
+
+          $scope.hospitals.forEach(function(hospital) {
+            hospital.distancy = generateRandomDistancy();
+          });
         });
 
       },
@@ -72,39 +72,41 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile, $i
   }
 
   function initialize() {
-    //var myLatlng = new google.maps.LatLng(43.07493, -89.381388);
-    var myLatlng = new google.maps.LatLng(-15.8240771, -48.0688698);
+    var initialPosition = new google.maps.LatLng(-15.7778007,-47.8937589);
 
     var mapOptions = {
-      center: myLatlng,
-      zoom: 16,
+      center: initialPosition,
+      zoom: 10,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-    //Marker + infowindow + angularjs compiled ng-click
-    var contentString = "<div><a ng-click='clickTest()'>Click me!</a></div>";
-    var compiled = $compile(contentString)($scope);
+    $scope.hospitals.forEach(function (hospital) {
+      //Marker + infowindow + angularjs compiled ng-click
+      var contentString = "<div><a ng-click='clickTest()'>Ver tempo de espera no " + hospital.get('nome') + "</a></div>";
+      var compiled = $compile(contentString)($scope);
 
-    var infowindow = new google.maps.InfoWindow({
-      content: compiled[0]
-    });
+      var infowindow = new google.maps.InfoWindow({
+        content: compiled[0]
+      });
 
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Uluru (Ayers Rock)'
-    });
+      var position = new google.maps.LatLng(hospital.get('local').latitude, hospital.get('local').longitude);
+      var marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        title: hospital.get('nome')
+      });
 
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map, marker);
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+      });
     });
 
     $scope.map = map;
 
     $scope.mapInitialized = true;
   }
-  google.maps.event.addDomListener(window, 'load', initialize);
+  //google.maps.event.addDomListener(window, 'load', initialize);
 
   $scope.centerOnMe = function() {
     if (!$scope.map) {
@@ -157,5 +159,13 @@ controllers.controller('HospitalsCtrl', function($scope, $location, $compile, $i
     $scope.showMap = false;
     $scope.showList = true;
   };
+
+  function generateRandomDistancy() {
+    return getRandomInt(5, 30) + "." + getRandomInt(1, 50) + " km distante";
+  }
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
 });

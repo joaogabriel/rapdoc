@@ -19,10 +19,10 @@
 
     <div class="" ng-repeat="hospital in hospitals" ng-show="showList"> <!-- TODO pq removi a classe? -->
 
-      <div class="item item-icon-left item-icon-right" ng-click="viewHospitalData(hospital.id)">
-        <i class="icon ion-medkit"></i>
-        {{hospital.get('nome')}}
-        <i class="icon ion-ios-arrow-right"></i>
+      <div class="item item-avatar" ng-click="viewHospitalData(hospital.id)">
+        <img src="img/hospitals/{{hospital.get('logo')}}">
+        <h2>{{hospital.get('nome')}}</h2>
+        <p>{{hospital.distancy}}</p>
       </div>
     </div>
 
