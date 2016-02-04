@@ -185,8 +185,44 @@
 
     <div class="list card">
       <div class="item item-avatar">
-        <img src="../img/health-icons/enfermeira.png">
-        <h2>Ginecologia</h2>
+        <img src="../img/health-icons/gravida.png">
+        <h2>Ginecologia e Obstetrícia</h2>
+        <p>Aprox. {{situacaoHospital.ginecologiaTempoEspera}}</p>
+      </div>
+
+      <div class="item item-body">
+        <div class="progress">
+          <div class="progress-bar progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{situacaoHospital.pediatriaPercentual}}"
+               aria-valuemin="0" aria-valuemax="100" style="width: {{situacaoHospital.ginecologiaPercentual}}%">
+          </div>
+        </div>
+
+        <p>
+          <a href="#" class="subdued">10 Curtidas</a>
+          <a href="#" class="subdued">19 Comentários</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Curtir
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comentar
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Compartilhar
+        </a>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="../img/health-icons/surgery-512.png">
+        <h2>Cirurgia Geral</h2>
         <p>Aprox. {{situacaoHospital.ginecologiaTempoEspera}}</p>
       </div>
 
